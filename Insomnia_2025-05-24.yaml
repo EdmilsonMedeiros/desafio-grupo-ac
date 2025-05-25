@@ -1,0 +1,372 @@
+type: collection.insomnia.rest/5.0
+name: AC Project
+meta:
+  id: wrk_698d452103fd46ce9491678d3b104b7b
+  created: 1747935411182
+  modified: 1747935411182
+collection:
+  - name: Auth
+    meta:
+      id: fld_158e0bd8f67f48b6a20451e526097661
+      created: 1747935553573
+      modified: 1747935553573
+      sortKey: -1747935553573
+    children:
+      - url: http://127.0.0.1:8000/api/auth/register
+        name: Register
+        meta:
+          id: req_d3b8e844abc648fb835ae8c2f0da17c2
+          created: 1747935555570
+          modified: 1748128682456
+          isPrivate: false
+          sortKey: -1747935555570
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Edmilson",
+            	"email": "edmilsonjhm@gmail.com",
+            	"password": "secret"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/auth/login
+        name: Login
+        meta:
+          id: req_57dc6cddb03c41f6b4c958168ce47176
+          created: 1747935768788
+          modified: 1748128819844
+          isPrivate: false
+          sortKey: -1747935768788
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "alzilene@gmail.com",
+            	"password": "secret"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/auth/logout
+        name: Logout
+        meta:
+          id: req_58db8754e0c14044ba38a9c796228713
+          created: 1747935850476
+          modified: 1748097952545
+          isPrivate: false
+          sortKey: -1747935850476
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_643ee6719dd94c87b5b15615c0cdcbb0
+          - id: pair_fbba259588684544a1fb61ccef5ede22
+            name: Authorization
+            value: Bearer
+              eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NDgwOTc5MTYsImV4cCI6MTc0ODEwMTUxNiwibmJmIjoxNzQ4MDk3OTE2LCJqdGkiOiJvdFdLaExPcjlMUTR3alAzIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4WC5aOXt0N9WGUpa2vg-4XHqCJZ4D1CIR6IeA0SFHOg
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/auth/me
+        name: Profile
+        meta:
+          id: req_c2832f6688a34ad19822a641ec9d05b7
+          created: 1747936077487
+          modified: 1748113576027
+          isPrivate: false
+          sortKey: -1747936077487
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_bab7daef62cd46beb5787a1d7fb17bc2
+          - id: pair_0f3055434fb846e0a24d962217bf5eb1
+            name: Authorization
+            value: Bearer
+              eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NDgxMTM0NTIsImV4cCI6MTc0ODExNzA1MiwibmJmIjoxNzQ4MTEzNDUyLCJqdGkiOiJGa3c4Z3RjNnV0TFA2aWhhIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.2MViwed8vs2Oyi_UIJjaTVpJkvbAAVINdsCKPGwtsFM
+            disabled: false
+          - id: pair_097b71e686324d6393cf369c3ac986fa
+            name: Content-Type
+            value: application/json
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/auth/refresh
+        name: Refresh Token
+        meta:
+          id: req_20c794cdb5b14fca87812c3503f084f9
+          created: 1748105392789
+          modified: 1748105473007
+          isPrivate: false
+          sortKey: -1747935963981.5
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_bab7daef62cd46beb5787a1d7fb17bc2
+          - id: pair_0f3055434fb846e0a24d962217bf5eb1
+            name: Authorization
+            value: Bearer
+              eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTc0ODEwNTQyMCwiZXhwIjoxNzQ4MTA5MDYyLCJuYmYiOjE3NDgxMDU0NjIsImp0aSI6ImpBTjgyNkN0eEJOQXRCZjUiLCJzdWIiOiI0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.gidKYIpnKI50fOI-JPzSqPaAkHyO7Wc4xiZHhlbnkYY
+            disabled: false
+          - id: pair_097b71e686324d6393cf369c3ac986fa
+            name: Content-Type
+            value: application/json
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Balance
+    meta:
+      id: fld_29c0a9df4b5c44ee8bf1c5395957d774
+      created: 1748049951247
+      modified: 1748049951247
+      sortKey: -1748049951247
+    children:
+      - url: http://127.0.0.1:8000/api/balance
+        name: Get User Balance
+        meta:
+          id: req_d0623c621a9941efbbdc789a88db94a9
+          created: 1748049954474
+          modified: 1748119825756
+          isPrivate: false
+          sortKey: -1748049954474
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_86e8f4f8a6b84fbfb2f830dc7d885534
+          - id: pair_66b00d1e807c4de0937fc799db147646
+            name: Authorization
+            value: Bearer
+              eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NDgxMTk3OTMsImV4cCI6MTc0ODEyMzM5MywibmJmIjoxNzQ4MTE5NzkzLCJqdGkiOiJUSnZUZ1VYTDB2SFdYek93Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.NCZJuCDlKgVxFdz7CA_8qbseM_AEG1TyEaOEOa1_xrI
+            disabled: false
+          - id: pair_e0b3df1f835a43448bb7acdcd6b2e101
+            name: Content-Type
+            value: application/json
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Transactions
+    meta:
+      id: fld_e11cc06357d342e5bfec772e1fe52a1f
+      created: 1748099434395
+      modified: 1748099434395
+      sortKey: -1748099434395
+    children:
+      - url: http://127.0.0.1:8000/api/transactions
+        name: Get User Transactions
+        meta:
+          id: req_c8a836e9012f4f6bb19d36cf22f1cc11
+          created: 1748099332419
+          modified: 1748128835129
+          isPrivate: false
+          sortKey: -1748099438111
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_dec69654b76d4716b5c68d442bbd3f72
+          - id: pair_18ef2f70bc424edda1c9620c3e42f39c
+            name: Authorization
+            value: Bearer
+              eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NDgxMjg4MjEsImV4cCI6MTc0ODEzMjQyMSwibmJmIjoxNzQ4MTI4ODIxLCJqdGkiOiJheFpJWlUzSExvbDhpQ2ZSIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.jBbEzUs3O4qg6XIhmga3P-8rMAIKJ9YmH2cfl2B39gA
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/transactions/transfer
+        name: Transfer
+        meta:
+          id: req_39626d2b8b494c28a8fa327e9283408a
+          created: 1748100548279
+          modified: 1748128776907
+          isPrivate: false
+          sortKey: -1748100548279
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email_beneficiary": "alzilene@gmail.com",
+            	"amount": 301000
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_95b35403731f4656ab19e4f47d6baf6e
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_ebca6bfc02b949ab9f1b2b31c69ebeed
+          - id: pair_52d10abe76c149559de448d9a43b5a35
+            name: Authorization
+            value: Bearer
+              eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NDgxMjg3MDYsImV4cCI6MTc0ODEzMjMwNiwibmJmIjoxNzQ4MTI4NzA2LCJqdGkiOiJvUzFqVWNpNUpTb0RQUzFmIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.b6XSvxBjyJGrGyG-sI3MrkGiJT5UzCRkV65NZOIVUzQ
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/transactions/revert
+        name: Revert
+        meta:
+          id: req_ee781792e5a34c69832f1b4ad7a9e0c0
+          created: 1748118952590
+          modified: 1748128896184
+          isPrivate: false
+          sortKey: -1748118952590
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"transaction_id": 3
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_da30484d8d0541f2abdb523629a6a407
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_c807b14fed6d45a4bccc2824a1e75df0
+          - id: pair_40223b384e22459098a40aa2d0e2da5c
+            name: Authorization
+            value: Bearer
+              eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NDgxMjg4MjEsImV4cCI6MTc0ODEzMjQyMSwibmJmIjoxNzQ4MTI4ODIxLCJqdGkiOiJheFpJWlUzSExvbDhpQ2ZSIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.jBbEzUs3O4qg6XIhmga3P-8rMAIKJ9YmH2cfl2B39gA
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Deposit
+    meta:
+      id: fld_a6af1cf33c3b4bcea2d80ce560628c35
+      created: 1748104616753
+      modified: 1748104616753
+      sortKey: -1748104616753
+    children:
+      - url: http://127.0.0.1:8000/api/transactions/deposit
+        name: Deposit
+        meta:
+          id: req_e52cc5e61c7d462fa0f0bde58409a6a1
+          created: 1748104404631
+          modified: 1748128439708
+          isPrivate: false
+          sortKey: -1748104625141
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email_beneficiary": "alzilene@gmail.com",
+            	"amount": 10000,
+            	"payer_name": "José Elias"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_d8a6ddfeaf0125261a6e96cdc273405ad31110da
+    created: 1747935411190
+    modified: 1748103357951
+  cookies:
+    - key: XSRF-TOKEN
+      value: eyJpdiI6IkUxS0F0ZytVd1U1Y3gzZXhqNGVyWHc9PSIsInZhbHVlIjoiMG9rQU4vUG5ibDkvR0c2Z1h6dmd6bG1uRXRqbGhjNU1ZM3ZFVlJjTXU4b291V2JpM09KSzQ2QlNNcHNnVHVVQ1FPcEtuS2c2T1JoUnpEQ2pUWnZhY0JCSHBndmtza0ZQWXlrVjZ3WFRwbG9nNDBNencxYitsYXR1RnAvdVpzOWUiLCJtYWMiOiI1NWU4ZGEzY2U1NmZhY2ExY2UxNDNhOTI3Y2IxNDlmNDMwODJhZmYxZmZhOWI3MDU1MTA1MjU2YjM2Y2I3ODc3IiwidGFnIjoiIn0%3D
+      maxAge: 7200
+      domain: 127.0.0.1
+      path: /
+      hostOnly: true
+      creation: 2025-05-24T16:15:57.949Z
+      lastAccessed: 2025-05-24T16:15:57.949Z
+      sameSite: lax
+      id: e1fc460c-c9f3-4d34-81a7-03fe735ca61f
+    - key: laravel_session
+      value: eyJpdiI6IjJ6a2pKNFRldHArMG52d3BBT2w0Z2c9PSIsInZhbHVlIjoiMnkxUDdIUFdHNzUrQjQreHFkQWZMeWpIQkNKRUdKdVRDSGR1V21SNXlNRk5YRk9vMEI4MVJpQVRMVGRsNEtaNUViWVE2M0hwVXlrZndQL1V3bTg2czBtL2pReWhQZnJQZzk4eW9xQlF3R0s0VUt5N1UvZzV0STVEVkhhN3FnTTciLCJtYWMiOiJjM2RiYTVhNzIwNzBiOTcxMTA4MjhmOTI1YzcyYTdhYmMwYTFlMTFiZjUzNWIxZmNiOWFhYzM5M2I2ZDdlZmEyIiwidGFnIjoiIn0%3D
+      maxAge: 7200
+      domain: 127.0.0.1
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-05-24T16:15:57.950Z
+      lastAccessed: 2025-05-24T16:15:57.950Z
+      sameSite: lax
+      id: d430d4f9-dbd2-4d60-95c3-ced7727a75c8
+environments:
+  name: Base Environment
+  meta:
+    id: env_d8a6ddfeaf0125261a6e96cdc273405ad31110da
+    created: 1747935411188
+    modified: 1747935411188
+    isPrivate: false
