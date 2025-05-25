@@ -27,3 +27,4 @@
     - Testes de unidade
     - Documentação
     - Observabilidade: Registro de log de tudo o que entra nas requisições por rotas e transações(transactions_entry) e de todas as exceptions(transactions_errors)
+    - Configuração do Docker
